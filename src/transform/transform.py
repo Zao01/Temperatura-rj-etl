@@ -21,7 +21,7 @@ monthly_avg = df.groupby("month")[["temperature_2m_avg"]].mean().reset_index()
 monthly_avg["temperature_2m_avg"] = monthly_avg["temperature_2m_avg"].round(1)
 
 # Cria diretório e salva
-os.makedirs("C:/Users/User/Desktop/JORNADA ENGENHEIRO DE DADOS/Temperatura-rj-etl/data/processed", exist_ok=True)
-monthly_avg.to_csv("C:/Users/User/Desktop/JORNADA ENGENHEIRO DE DADOS/Temperatura-rj-etl/data/processed/temperatura_rj_tratada.csv", index=False)
+os.makedirs("Temperatura-rj-etl/data/processed", exist_ok=True)
+monthly_avg.to_csv("Temperatura-rj-etl/data/processed/temperatura_rj_tratada.csv", index=False)
 
 print("Transformação finalizada com sucesso.")
