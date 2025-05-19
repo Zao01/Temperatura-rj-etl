@@ -80,7 +80,7 @@ temperatura-rj-etl/
 * [x] Escolha do dataset
 * [x] Extração completa
 * [x] Transformação estruturada
-* [ ] Carga e banco prontos
+* [x] Carga e banco prontos
 * [ ] Visualização entregue
 * [ ] Documentação 100%
 
