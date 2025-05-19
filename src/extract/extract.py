@@ -22,7 +22,7 @@ df = pd.DataFrame(data["daily"])
 df["temperature_2m_avg"] = (df["temperature_2m_max"] + df["temperature_2m_min"]) / 2
 
 # Criar diretório
-os.makedirs("data/raw", exist_ok=True)
-df.to_csv("data/raw/temperatura_rj_2023.csv", index=False)
+os.makedirs("C:/Users/User/Desktop/JORNADA ENGENHEIRO DE DADOS/Temperatura-rj-etl/data/raw", exist_ok=True)
+df.to_csv("C:/Users/User/Desktop/JORNADA ENGENHEIRO DE DADOS/Temperatura-rj-etl/data/raw/temperatura_rj_2023.csv", index=False)
 
 print("Extração concluída com sucesso.")
