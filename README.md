@@ -70,7 +70,12 @@ temperatura-rj-etl/
 
 ---
 
-## 📊 Exemplo de Insight (em construção)
+## 📊 Visualização
+
+Gráfico da temperatura média mensal no RJ em 2023:
+
+![Gráfico](notebooks/grafico_temperatura.png)
+
 
 > *"A temperatura média no RJ aumentou 1.3ºC na última década, com maior concentração de picos entre novembro e março."*
 ---
@@ -81,7 +86,7 @@ temperatura-rj-etl/
 * [x] Extração completa
 * [x] Transformação estruturada
 * [x] Carga e banco prontos
-* [ ] Visualização entregue
+* [x] Visualização entregue
 * [ ] Documentação 100%
 
 ---
