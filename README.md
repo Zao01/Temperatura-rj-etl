@@ -2,7 +2,7 @@
 
 ## 🔍 Visão Geral
 
-Este projeto demonstra a criação de um pipeline completo de Engenharia de Dados para análise da temperatura no estado do Rio de Janeiro nos últimos anos.
+Este projeto demonstra a criação de um pipeline completo de Engenharia de Dados para análise da temperatura média no estado do Rio de Janeiro em 2023.
 
 O objetivo é mostrar, de forma estruturada e automatizada, como a temperatura tem variado com o tempo, utilizando dados reais, técnicas de ETL e visualização de insights.
 
@@ -14,8 +14,6 @@ O objetivo é mostrar, de forma estruturada e automatizada, como a temperatura t
 - Realizar tratamento, limpeza e agregações relevantes
 - Armazenar os dados processados em banco relacional (SQLite)
 - Visualizar insights de forma clara e compreensível
-- Construir um projeto de portfólio com valor para o mercado de dados
-
 ---
 
 ## 🛠️ Tecnologias Utilizadas
@@ -87,7 +85,7 @@ Gráfico da temperatura média mensal no RJ em 2023:
 * [x] Transformação estruturada
 * [x] Carga e banco prontos
 * [x] Visualização entregue
-* [ ] Documentação 100%
+* [x] Documentação 100%
 
 ---
 
