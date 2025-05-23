@@ -3,3 +3,4 @@ requests
 seaborn
 matplotlib
 python-dotenv
+

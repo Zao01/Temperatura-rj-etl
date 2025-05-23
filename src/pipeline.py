@@ -1,10 +1,11 @@
 import pandas as pd
 import requests
 import sqlite3
-import os
 import logging
-from dotenv import load_dotenv
-load_dotenv()
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import os
 
 def setup_logging():
     logging.basicConfig(
@@ -15,13 +16,20 @@ def setup_logging():
 
 def extract_data(url, params, raw_path):
     logging.info("Iniciando extração.")
-    response = requests.get(url, params=params)
+    
+    response = requests.get(url, params=params) 
+
+    if response.status_code != 200:
+        logging.error(f"Erro na extração: {response.status_code}")
+        raise Exception(f"Erro na extração: {response.status_code}")
+
     data = response.json()
     df = pd.DataFrame(data["daily"])
     df["temperature_2m_avg"] = (df["temperature_2m_max"] + df["temperature_2m_min"]) / 2
     os.makedirs(os.path.dirname(raw_path), exist_ok=True)
     df.to_csv(raw_path, index=False)
     logging.info("Extração concluída.")
+
 
 def transform_data(raw_path, processed_path):
     logging.info("Iniciando transformação.")
@@ -43,11 +51,7 @@ def load_data(processed_path, db_path):
     conn.close()
     logging.info("Carga concluída.")
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
-import os
 
 def send_email(subject, body):
     sender_email = os.getenv("EMAIL_USER")
