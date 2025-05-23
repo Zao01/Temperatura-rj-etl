@@ -68,16 +68,9 @@ EMAIL_PASSWORD=sua_senha_de_app
    
 3. Configure as variáveis de ambiente conforme instruções acima.
 
-4. Execute o pipeline:([GitHub][1])
+4. Execute o pipeline:
 
   . python main.py
-
-
----
-
-## 📈 Exemplos de Saída
-
-*Inclua aqui imagens ou descrições dos gráficos gerados, logs ou exemplos de e-mails de notificação.*
 
 ---
 
@@ -95,7 +88,7 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ## 📬 Contato
 
-Para dúvidas ou sugestões, entre em contato: [adm.marcosfonseca@gmail.com](mailto:seu_email@gmail.com)
+Para dúvidas ou sugestões, entre em contato: [adm.marcosfonseca@gmail.com](mailto:adm.marcosfonseca@gmail.com)
 
 ---
 
