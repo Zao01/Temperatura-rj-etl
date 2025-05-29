@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-temperatura-rj"
+		},
+		"blob_temperatura_connectionString": {
+			"value": ""
+		},
+		"http_open_meteo_properties_typeProperties_url": {
+			"value": "https://archive-api.open-meteo.com/v1/archive"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
