@@ -1,0 +1,9 @@
+{
+	"name": "adf-temperatura-rj",
+	"location": "brazilsouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a57e5be1-b7a7-4b2d-9046-8ea3094d72d6",
+		"tenantId": "70503c33-9120-480c-997e-e42fb0e25c6e"
+	}
+}
