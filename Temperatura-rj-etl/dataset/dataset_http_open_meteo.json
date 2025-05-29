@@ -1,0 +1,37 @@
+{
+	"name": "dataset_http_open_meteo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "http_open_meteo",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"latitude": {
+				"type": "string"
+			},
+			"longitude": {
+				"type": "string"
+			},
+			"start_date": {
+				"type": "string"
+			},
+			"end_date": {
+				"type": "string"
+			},
+			"daily": {
+				"type": "string"
+			},
+			"timezone": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {}
+	}
+}
