@@ -1,0 +1,23 @@
+{
+	"name": "dataset_raw_csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob_temperatura",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "raw/temperatura_raw.csv",
+				"container": "temperatura"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

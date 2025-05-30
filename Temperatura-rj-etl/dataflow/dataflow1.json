@@ -6,25 +6,22 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "dataset_raw_json",
+						"referenceName": "dataset_raw_csv",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "derivarMedia"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
+				"parameters{",
+				"     parâmetro1 as string,",
+				"     parâmetro2 as string",
+				"}",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine') ~> source1",
-				"source1 derive({temperature_2m_avg     } = (temperature_2m_max + temperature_2m_min) / 2,",
-				"          coluna2 = ERROR_FUNCTION('')) ~> derivarMedia"
+				"     ignoreNoFilesFound: false) ~> source1"
 			]
 		}
 	}
