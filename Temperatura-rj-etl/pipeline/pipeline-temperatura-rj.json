@@ -1,0 +1,63 @@
+{
+	"name": "pipeline-temperatura-rj",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Open-Meteo",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "HttpReadSettings",
+							"requestMethod": "GET"
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "dataset_http_open_meteo",
+						"type": "DatasetReference",
+						"parameters": {
+							"latitude": "-22.9",
+							"longitude": "-43.2",
+							"start_date": "2023-01-01",
+							"end_date": "2023-12-31",
+							"daily": "temperature_2m_max,temperature_2m_min",
+							"timezone": "America/Sao_Paulo"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "dataset_raw_json",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

@@ -7,22 +7,28 @@
 		},
 		"parameters": {
 			"latitude": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "-22.9"
 			},
 			"longitude": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "-43.2"
 			},
 			"start_date": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "2023-01-01"
 			},
 			"end_date": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "2023-12-31"
 			},
 			"daily": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "temperature_2m_max,temperature_2m_min"
 			},
 			"timezone": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "America/Sao_Paulo"
 			}
 		},
 		"annotations": [],
